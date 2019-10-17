@@ -1,0 +1,4 @@
+# virtual environment #
+.venv
+
+.idea/inspectionProfiles/profiles_settings.xml
