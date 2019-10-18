@@ -1,10 +1,11 @@
 import cv2
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel
-from PyQt5.QtCore import QThread, pyqtSignal,QWaitCondition, QMutex
+from PyQt5.QtCore import QThread, pyqtSignal, QWaitCondition, QMutex, pyqtSlot
 
 import socket
 class Thread(QThread):
+    chagned_text = pyqtSignal(str)
     def __init__(self):
         QThread.__init__(self)
         self.message = ' '
@@ -26,12 +27,14 @@ class Thread(QThread):
             finally:
                 if self.message == 'q':
                     self.sock.close()
+                    sys.exit()
+                else:
+                    self.chagned_text.emit(self.message)
 
 class Mywin(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.th = Thread()
         self.btn = QPushButton('여기를 눌러보시오', self)
         self.btn.resize(self.btn.sizeHint())
         self.btn.setToolTip('한번 만들어 보았습니다.<b>안녕하세요.<b/>')
@@ -39,11 +42,16 @@ class Mywin(QWidget):
         self.label = QLabel('테스트', self)
         self.setGeometry(300, 300, 400, 500)
         self.setWindowTitle('PCCTC!!S')
-        self.initUI()
+
+        self.th = Thread()
         self.th.start()
 
-    def initUI(self):
-        self.label.setText(self.th.message)
+        self.th.chagned_text.connect(self.recive_message_signal)
+
+    @pyqtSlot(str)
+    def recive_message_signal(self, _text):
+        self.label.setText(_text)
+
 
 
 if __name__ == "__main__":

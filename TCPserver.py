@@ -9,19 +9,16 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
         rbuff = 'abc'
 
         while len(rbuff) > 0:
-            rbuff = input().encode(encoding='utf-8')
+            rbuff = input()
+            sock.send(rbuff.encode(encoding='utf-8'))
+            print('송신 : {0}'.format(rbuff))
             if rbuff == 'q':
                 break
-            sock.send(rbuff)
-            print('송신 : {0}'.format(rbuff))
         sock.close()
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print('{0} <Bind IP>'.format(sys.argv[0]))
-        sys.exit()
-
-    bindIP = sys.argv[1]
+    #bindIP = sys.argv[1]
+    bindIP = 'localhost'
     bindPort = 5425
 
     server = socketserver.TCPServer((bindIP, bindPort), MyTCPHandler)
