@@ -48,7 +48,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ui_02">
+  <component name="RunManager" selected="Python.modt">
     <configuration name="TCPserver" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pcctv" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -93,7 +93,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tcpThreadTemp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="modt" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pcctv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -106,7 +106,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tcpThreadTemp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/modt.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,17 +162,17 @@
     <list>
       <item itemvalue="Python.mkUi" />
       <item itemvalue="Python.ui__01" />
-      <item itemvalue="Python.tcpThreadTemp" />
       <item itemvalue="Python.TCPserver" />
       <item itemvalue="Python.ui_02" />
+      <item itemvalue="Python.modt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.modt" />
+        <item itemvalue="Python.TCPserver" />
         <item itemvalue="Python.ui_02" />
         <item itemvalue="Python.mkUi" />
         <item itemvalue="Python.ui__01" />
-        <item itemvalue="Python.tcpThreadTemp" />
-        <item itemvalue="Python.TCPserver" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +204,7 @@
       <workItem from="1571018951340" duration="1828000" />
       <workItem from="1571194860851" duration="1147000" />
       <workItem from="1571196131109" duration="1194000" />
-      <workItem from="1571623409102" duration="3856000" />
+      <workItem from="1571623409102" duration="4744000" />
     </task>
     <servers />
   </component>
@@ -224,11 +224,12 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pcctv$mkUi.coverage" NAME="mkUi Coverage Results" MODIFIED="1571624099447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pcctv$TCPserver.coverage" NAME="TCPserver Coverage Results" MODIFIED="1571385699614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pcctv$TCPserver.coverage" NAME="TCPserver Coverage Results" MODIFIED="1571627977641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pcctv$main.coverage" NAME="main Coverage Results" MODIFIED="1570948452213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pcctv$tcpThreadTemp.coverage" NAME="tcpThreadTemp Coverage Results" MODIFIED="1571386306672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pcctv$ui__01.coverage" NAME="ui__01 Coverage Results" MODIFIED="1571623895751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
     <SUITE FILE_PATH="coverage/pcctv$ui_02.coverage" NAME="ui_02 Coverage Results" MODIFIED="1571624473929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
+    <SUITE FILE_PATH="coverage/pcctv$modt.coverage" NAME="modt Coverage Results" MODIFIED="1571627979390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pcctv$find_Contours.coverage" NAME="find_Contours Coverage Results" MODIFIED="1569928335198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
