@@ -10,10 +10,9 @@ def compile_ui(UI_PATH='Insert UI path'):
     print(uiPyFile)
     fp = open(uiPyFile, 'w')
 
-
     uic.compileUi(UI_PATH, fp, from_imports=True)
     fp.close()
 
 if __name__ == '__main__':
-    UI_PATH = './UI/ui__01.ui'
+    UI_PATH = './UI/ui_02.ui'
     compile_ui(UI_PATH)

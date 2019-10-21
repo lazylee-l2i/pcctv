@@ -4,22 +4,28 @@ from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel
 from PyQt5.QtCore import QThread, pyqtSignal, QWaitCondition, QMutex, pyqtSlot
 
 import socket
+
+
 class Thread(QThread):
     chagned_text = pyqtSignal(str)
+
     def __init__(self):
         QThread.__init__(self)
         self.message = ' '
-        self.sock = socket.socket(socket.AF_INET,
-                                  socket.SOCK_STREAM)
-        self.sock.bind(('localhost', 0))
-        self.sock.connect(('localhost', 5425))
+        try:
+            self.sock = socket.socket(socket.AF_INET,
+                                      socket.SOCK_STREAM)
+            self.sock.bind(('localhost', 0))
+            self.sock.connect(('localhost', 5425))
+        except:
+            print("IP주소가 존재하지 않거나 잘못된 경로입니다.")
+            sys.exit()
 
     def __del__(self):
         self.wait()
 
     def run(self):
         while True:
-            #To Do
             try:
                 message = self.sock.recv(1024)
                 message = str(message, encoding='utf-8')
@@ -30,6 +36,7 @@ class Thread(QThread):
                     sys.exit()
                 else:
                     self.chagned_text.emit(self.message)
+
 
 class Mywin(QWidget):
     def __init__(self):
@@ -53,9 +60,8 @@ class Mywin(QWidget):
         self.label.setText(_text)
 
 
-
 if __name__ == "__main__":
-    #run()
+    # run()
     app = QApplication(sys.argv)
     w = Mywin()
     w.show()

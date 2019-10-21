@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file './UI/ui__01.ui'
+# Form implementation generated from reading ui file './UI/ui_02.ui'
 #
 # Created by: PyQt5 UI code generator 5.13.0
 #
@@ -8,13 +8,16 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QMainWindow
 
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
-        Dialog.resize(1000, 535)
-        self.mFrame = QtWidgets.QFrame(Dialog)
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(1021, 531)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.mFrame = QtWidgets.QFrame(self.centralwidget)
         self.mFrame.setGeometry(QtCore.QRect(-10, -10, 1021, 531))
         self.mFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.mFrame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -64,36 +67,46 @@ class Ui_Dialog(object):
         self.label02.setFrameShape(QtWidgets.QFrame.Box)
         self.label02.setAlignment(QtCore.Qt.AlignCenter)
         self.label02.setObjectName("label02")
-        self.exLabel = QtWidgets.QLabel(self.mFrame)
-        self.exLabel.setGeometry(QtCore.QRect(820, 30, 161, 481))
+        self.label = QtWidgets.QLabel(self.mFrame)
+        self.label.setGeometry(QtCore.QRect(820, 30, 161, 481))
         font = QtGui.QFont()
         font.setPointSize(29)
-        self.exLabel.setFont(font)
-        self.exLabel.setFrameShape(QtWidgets.QFrame.Box)
-        self.exLabel.setTextFormat(QtCore.Qt.PlainText)
-        self.exLabel.setAlignment(QtCore.Qt.AlignCenter)
-        self.exLabel.setObjectName("exLabel")
+        self.label.setFont(font)
+        self.label.setFrameShape(QtWidgets.QFrame.Box)
+        self.label.setTextFormat(QtCore.Qt.PlainText)
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        MainWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(Dialog)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def retranslateUi(self, Dialog):
+
+    def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label04.setText(_translate("Dialog", "ParkingLot 1"))
-        self.label08.setText(_translate("Dialog", "ParkingLot 1"))
-        self.label01.setText(_translate("Dialog", "ParkingLot 1"))
-        self.label07.setText(_translate("Dialog", "ParkingLot 1"))
-        self.label03.setText(_translate("Dialog", "ParkingLot 1"))
-        self.label06.setText(_translate("Dialog", "ParkingLot 1"))
-        self.label05.setText(_translate("Dialog", "ParkingLot 1"))
-        self.label02.setText(_translate("Dialog", "ParkingLot 1"))
-        self.exLabel.setText(_translate("Dialog", "Exit"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.label04.setText(_translate("MainWindow", "ParkingLot 1"))
+        self.label08.setText(_translate("MainWindow", "ParkingLot 1"))
+        self.label01.setText(_translate("MainWindow", "ParkingLot 1"))
+        self.label07.setText(_translate("MainWindow", "ParkingLot 1"))
+        self.label03.setText(_translate("MainWindow", "ParkingLot 1"))
+        self.label06.setText(_translate("MainWindow", "ParkingLot 1"))
+        self.label05.setText(_translate("MainWindow", "ParkingLot 1"))
+        self.label02.setText(_translate("MainWindow", "ParkingLot 1"))
+        self.label.setText(_translate("MainWindow", "Exit"))
 
-if __name__ == "__main__":
+class myWin(QMainWindow, Ui_MainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+
+
+
+if __name__ == '__main__':
     from PyQt5.QtWidgets import QApplication
     import sys
+
     app = QApplication(sys.argv)
-    w = Ui_Dialog()
+    w = myWin()
     w.show()
     sys.exit(app.exec_())
